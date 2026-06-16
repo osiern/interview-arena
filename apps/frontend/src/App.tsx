@@ -1,7 +1,7 @@
-import TopicsPage from './pages/TopicsPage';
+import AppRouter from './router/AppRouter';
 
 function App() {
-    return <TopicsPage />;
+    return <AppRouter />;
 }
 
 export default App;

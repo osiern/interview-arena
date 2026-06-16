@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 type TopicCardProps = {
     title: string;
 };
@@ -5,7 +7,9 @@ type TopicCardProps = {
 function TopicCard({title}: TopicCardProps) {
     return (
         <li>
-            {title}
+            <Link to={`/topic/${title.toLowerCase()}`}>
+                {title}
+            </Link>
         </li>
     );
 }
