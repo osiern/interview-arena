@@ -1,7 +1,7 @@
-import { useParams } from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 
 import QuestionCard from '../components/QuestionCard';
-import { questionsByTopic } from '../data/questions';
+import {questionsByTopic} from '../data/questions';
 import styles from './TopicPage.module.scss';
 
 function TopicPage() {
@@ -11,6 +11,7 @@ function TopicPage() {
 
     return (
         <main className={styles.container}>
+            <Link to="/">← Все темы</Link>
             <h1>{topicId}</h1>
 
             <h2>Вопросы</h2>
