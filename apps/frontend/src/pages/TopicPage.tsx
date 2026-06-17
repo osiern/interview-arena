@@ -1,7 +1,7 @@
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 function TopicPage() {
-    const {topicId} = useParams();
+    const { topicId } = useParams();
 
     return (
         <main>

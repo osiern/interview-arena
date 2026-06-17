@@ -1,14 +1,38 @@
 import TopicCard from '../components/TopicCard';
 
 const topics = [
-    'JavaScript',
-    'TypeScript',
-    'React',
-    'Playwright',
-    'REST API',
-    'SQL',
-    'Docker',
-    'Git',
+    {
+        title: 'JavaScript',
+        slug: 'javascript',
+    },
+    {
+        title: 'TypeScript',
+        slug: 'typescript',
+    },
+    {
+        title: 'React',
+        slug: 'react',
+    },
+    {
+        title: 'Playwright',
+        slug: 'playwright',
+    },
+    {
+        title: 'REST API',
+        slug: 'rest-api',
+    },
+    {
+        title: 'SQL',
+        slug: 'sql',
+    },
+    {
+        title: 'Docker',
+        slug: 'docker',
+    },
+    {
+        title: 'Git',
+        slug: 'git',
+    },
 ];
 
 function TopicsPage() {
@@ -18,10 +42,11 @@ function TopicsPage() {
             <h2>Темы для подготовки</h2>
 
             <ul>
-                {topics.map(topic => (
+                {topics.map((topic) => (
                     <TopicCard
-                        key={topic}
-                        title={topic}
+                        key={topic.slug}
+                        title={topic.title}
+                        slug={topic.slug}
                     />
                 ))}
             </ul>

@@ -1,15 +1,14 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 type TopicCardProps = {
     title: string;
+    slug: string;
 };
 
-function TopicCard({title}: TopicCardProps) {
+function TopicCard({ title, slug }: TopicCardProps) {
     return (
         <li>
-            <Link to={`/topic/${title.toLowerCase()}`}>
-                {title}
-            </Link>
+            <Link to={`/topic/${slug}`}>{title}</Link>
         </li>
     );
 }
