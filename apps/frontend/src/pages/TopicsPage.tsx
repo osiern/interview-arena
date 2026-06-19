@@ -3,6 +3,7 @@ import { questionsByTopic } from '../data/questions';
 import { topics } from '../data/topics';
 import { useProgressStore } from '../store/progressStore';
 import styles from './TopicsPage.module.scss';
+import { useThemeStore } from '../store/themeStore';
 
 function TopicsPage() {
     const progressByTopic = useProgressStore(
@@ -29,9 +30,24 @@ function TopicsPage() {
             )
             : 0;
 
+    const theme = useThemeStore(
+        state => state.theme,
+    );
+
+    const toggleTheme =
+        useThemeStore(
+            state => state.toggleTheme,
+        );
+
     return (
         <main className={styles.container}>
             <h1>Interview Arena</h1>
+
+            <button onClick={toggleTheme}>
+                {theme === 'light'
+                    ? '🌙 Тёмная тема'
+                    : '☀️ Светлая тема'}
+            </button>
 
             <h2>Общий прогресс</h2>
 
